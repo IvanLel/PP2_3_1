@@ -28,8 +28,8 @@
           <td th:text = "${user.getSurname()}"/>
           <td th:text = "${user.getDepartment()}"/>
           <td th:text = "${user.getSalary()}"/>
-          <td><a th:href="@{'users/edit?id=' + ${user.getId()}}">Edit</a>
-              <a th:href="@{'users/delete?id=' + ${user.getId()}}">Delete</a></td>
+          <td><a th:href="@{'/users/edit?id=' + ${user.getId()}}">Edit</a>
+              <a th:href="@{'/users/delete?id=' + ${user.getId()}}">Delete</a></td>
 
 
         </tr>
@@ -38,7 +38,7 @@
     </table>
   <br></br>
   <input type="button" value = "add"
-  onclick="window.location.href = '/users/addNewUser'"/>
+  onclick="window.location.href = '/users/edit?id=0'"/>
 
     </form>
   </body>

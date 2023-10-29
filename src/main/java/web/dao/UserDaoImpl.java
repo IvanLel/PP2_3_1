@@ -3,6 +3,7 @@ package web.dao;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import web.entity.User;
 
 import javax.persistence.*;
@@ -14,7 +15,6 @@ public class UserDaoImpl implements UserDao {
 
     @PersistenceContext
     EntityManager em;
-
 
     @Override
     public void add(User user) {
