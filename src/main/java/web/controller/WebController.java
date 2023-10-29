@@ -18,7 +18,7 @@ public class WebController {
 
     private final String REDIRECT_MAIN = "redirect:/users";
 
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
     public WebController(UserService userService) {
